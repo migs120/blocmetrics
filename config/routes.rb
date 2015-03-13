@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
+#   get 'sites/index'
+
+#   get 'sites/show'
+
+#   get 'sites/new'
+
+#   get 'sites/edit'
+  
+  resources :sites
+
   devise_for :users
+   resources :users, only: [:update]
 
 
 #  get 'welcome/index'
