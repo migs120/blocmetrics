@@ -79,5 +79,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
+  config.action_mailer.default_url_options = { host: 'mgmetrics.herokuapp.com' }
+  
   config.active_record.dump_schema_after_migration = false
 end
