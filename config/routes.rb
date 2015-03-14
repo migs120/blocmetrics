@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :sites
 
   devise_for :users
-   resources :users, only: [:update]
+   resources :users#, only: [:update]
 
 
 #  get 'welcome/index'
