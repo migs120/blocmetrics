@@ -7,7 +7,16 @@ Rails.application.routes.draw do
 
 #   get 'sites/edit'
   
-  resources :sites
+  match 'sites' => "sites#index", via: :options
+  match 'events' => "events#index", via: :options
+  
+  
+  #match 'events' => "events#index", via: :post
+  #match 'sites/1/events' => "events#create", via: :post
+  resources :sites do
+    #resources :events
+  end
+  resources :events
 
   devise_for :users
    resources :users#, only: [:update]

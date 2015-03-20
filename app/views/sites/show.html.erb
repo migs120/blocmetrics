@@ -1,2 +1,43 @@
-<h1>Sites#show</h1>
-<p>Find me in app/views/sites/show.html.erb</p>
+<%if current_user%>
+    <h1>Sites#show</h1>
+    <p>Find me in app/views/sites/show.html.erb</p>
+    <p><%=@site.name%><p/>
+    <% @events.each do |event|%>
+    <%= event.name %><br/>
+    <%end%>
+<%else%>
+ <% redirect_to root_path %>
+ <%=flash[:notice] = "Must sign in or sign up!!"%>
+<%end%>
+
+<%if 1==0 %>
+            <font color='red'><%='rails .logger.methods'%></font>
+            <%=@any %><br/> <!-- rails logger methods -->
+
+
+            <font color='red'><%='rails .logger.inspect'%></font>
+            <%= @any2 %><br/><br/>
+
+
+            <font color='red'><%='@events.inspect'%></font>
+            <%= @events.inspect %><br/><br/>
+
+
+            <%= @events.inspect.to_s[20..30] %><br/><br/>
+
+            <% @events.inspect.split('#<', -1).each do |this| %>
+            <%= this %><br/><br/>
+            <%end%>
+
+            <% @events.inspect.split('#<', -1).last.to_s.split(',',-1).each do |new| %>
+            <%= new %><br/>
+            <%end%><br/>
+
+
+            <%=@events.inspect.split('#<', -1)%><br/>
+
+            <% @events.inspect.split('#<', -1).each do |this| %>
+            <%= this %><br/><br/>
+            <%end%>
+
+<%end%>
