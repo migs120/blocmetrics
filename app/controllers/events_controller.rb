@@ -21,9 +21,9 @@ class EventsController < ApplicationController
     Rails.logger.info params.inspect
     Rails.logger
 
-    #@site = Site.first # .find(params[:site_identifier)
-    @site= Site.find(params[:site_identifier])
-    #@site = Site.find(params[:site_identifier)
+            #@site = Site.first # .find(params[:site_identifier)
+    @site= Site.find(params[:site_identifier])   
+            #@site = Site.find(params[:site_identifier)
     Rails.logger.info params.keys
     @event = @site.events.build(params.require(:event).permit(:name, :property_1, :property_2 ))
     #@event = @site.events.build( name: params[:name], property_1: params[:property_1], proterty_2: params[:property2])

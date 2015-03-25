@@ -1,16 +1,160 @@
 <%if current_user%>
-    <h1>Sites#show</h1>
-    <p>Find me in app/views/sites/show.html.erb</p>
-    <p><%=@site.name%><p/>
+      <h1><font color='red'>Showing Site <%=@site.name%></font></h1>
+
+   <div id="ex0">If Graph is not showing, refresh page.</div>
+  
+  
+    <script type="text/javascript">
+            google.load('visualization', '1', {packages: ['corechart']});
+    google.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'Events Per Day');
+      
+      
+                         <% a1=[] %> <%a2=[] %> <%a3=[] %> <% a4=[] %> <%a5=[] %> <%a6=[] %> <%a7=[] %>
+                         <% a8=[] %> <%a9=[] %> <%a10=[] %> <% a11=[] %> <%a12=[] %> <%a13=[] %> <%a14=[] %>
+                         <% a15=[] %> <%a16=[] %> <%a17=[] %> <% a18=[] %> <%a19=[] %><% a20=[] %> <%a21=[] %>
+                         <%a22=[] %> <% a23=[] %> <%a24=[] %> <%a25=[] %> <%a26=[] %> <%a27=[] %> <%a28=[] %>
+                         <%a29=[] %> <% a30=[] %> <%a31=[] %>
+                <% @events.each do |event | %>
+            
+                           <%if event.created_at.strftime("%d").to_i == 1 %>
+                            <% a1 << event %>
+                          <% elsif event.created_at.strftime("%d").to_i == 2 %>
+                            <% a2 << event%>
+                          <% elsif event.created_at.strftime("%d").to_i == 3 %>
+                            <% a3 << event%>
+                           <% elsif event.created_at.strftime("%d").to_i == 4 %>
+                            <% a4 << event%>
+                          <% elsif event.created_at.strftime("%d").to_i == 5 %>
+                            <% a5 << event%>
+                           <% elsif event.created_at.strftime("%d").to_i == 6 %>
+                            <% a6 << event%>
+                          <% elsif event.created_at.strftime("%d").to_i == 7 %>
+                            <% a7 << event%>
+                           
+                           <%elsif event.created_at.strftime("%d").to_i == 8 %>
+                            <% a8 << event %>
+                          <% elsif event.created_at.strftime("%d").to_i == 9 %>
+                            <% a9 << event%>
+                          <% elsif event.created_at.strftime("%d").to_i == 10 %>
+                            <% a10 << event%>
+                           <% elsif event.created_at.strftime("%d").to_i == 11 %>
+                            <% a11 << event%>
+                          <% elsif event.created_at.strftime("%d").to_i == 12 %>
+                            <% a12 << event%>
+                           <% elsif event.created_at.strftime("%d").to_i == 13 %>
+                            <% a13 << event%>
+                          <% elsif event.created_at.strftime("%d").to_i == 14 %>
+                            <% a14 << event%>
+                           
+                           <%elsif event.created_at.strftime("%d").to_i == 15 %>
+                            <% a15 << event %>
+                          <% elsif event.created_at.strftime("%d").to_i == 16 %>
+                            <% a16 << event%>
+                          <% elsif event.created_at.strftime("%d").to_i == 17 %>
+                            <% a17 << event%>
+                           <% elsif event.created_at.strftime("%d").to_i == 18 %>
+                            <% a18 << event%>
+                          <% elsif event.created_at.strftime("%d").to_i == 19 %>
+                            <% a19 << event%>
+                           <% elsif event.created_at.strftime("%d").to_i == 20 %>
+                            <% a20 << event%>
+                          <% elsif event.created_at.strftime("%d").to_i == 21 %>
+                            <% a22 << event%>
+                           
+                           <%elsif event.created_at.strftime("%d").to_i == 23 %>
+                            <% a23 << event %>
+                          <% elsif event.created_at.strftime("%d").to_i == 24 %>
+                            <% a24 << event%>
+                          <% elsif event.created_at.strftime("%d").to_i == 25 %>
+                            <% a25 << event%>
+                           <% elsif event.created_at.strftime("%d").to_i == 26 %>
+                            <% a26 << event%>
+                          <% elsif event.created_at.strftime("%d").to_i == 27 %>
+                            <% a27 << event%>
+                           <% elsif event.created_at.strftime("%d").to_i == 28 %>
+                            <% a28 << event%>
+                          <% elsif event.created_at.strftime("%d").to_i == 29 %>
+                            <% a29 << event%>
+                           
+                           <%elsif event.created_at.strftime("%d").to_i == 30 %>
+                            <% a30 << event %>
+                          <% elsif event.created_at.strftime("%d").to_i == 31 %>
+                            <% a31 << event%>
+                          
+                          <%end%>
+  
+  
+                <% end %>
+                     <% d1 = a1.length %> <% d2 = a2.length %>  <% d3 = a3.length %> <% d4 = a4.length %> <% d5 = a5.length %>  <% d6 = a6.length %> <% d7 = a7.length %>  
+                     <% d8 = a8.length %> <% d9 = a9.length %>  <% d10 = a10.length %> <% d11 = a11.length %> <% d12 = a12.length %>  <% d13 = a13.length %> <% d14 = a14.length %>
+                     <% d15 = a15.length %> <% d16 = a16.length %>  <% d17 = a17.length %> <% d18 = a18.length %> <% d19 = a19.length %>  <% d20 = a20.length %> <% d21 = a21.length %>
+                    <% d22 = a22.length %> <% d23 = a23.length %>  <% d24 = a24.length %> <% d25 = a25.length %> <% d26 = a26.length %>  <% d27 = a27.length %> <% d28 = a28.length %>     
+                     <% d29 = a29.length %> <% d30 = a30.length %>  <% d31 = a31.length %> 
+            
+      
+        data.addRows([
+        [0, 0],   [1, <%=d1%>],  [2, <%=d2%>],
+        [3, <%=d3%>],  [4, <%=d4%>],  [5, <%=d5%>],
+        [6, <%=d6%>],  [7, <%=d7%>],  [8,<%=d8%>],
+        [9, <%=d9%>],  [10, <%=d10%>], [11,<%=d11%>],
+        [12, <%=d12%>], [13, <%=d13%>], [14, <%=d14%>],
+        [15, <%=d15%>], [16, <%=d16%>], [17,<%=d17%>],
+        [18, <%=d18%>], [19,<%=d19%>], [20, <%=d20%>],
+        [21, <%=d21%>], [22,<%=d22%>], [23,<%=d23%>],
+        [24,<%=d24%>], [25, <%=d25%>], [26,<%=d26%>],
+        [27, <%=d27%>], [28,<%=d28%>], [29, <%=d29%>],
+        [30, <%=d30%>], [31, <%=d31%>]
+    
+      ]);
+
+      var options = {
+        width: 1000,
+        height: 300,
+        hAxis: {
+          title: 'Time'
+        },
+        vAxis: {
+          title: 'Site'
+        }
+      };
+
+      var chart = new google.visualization.LineChart(
+        document.getElementById('ex0'));
+
+      chart.draw(data, options);
+
+    }
+    </script>
+    <% link = link_to "Delete", @site, method: :delete, data: { confirm: 'Are you sure you want to delete this Site?'} %>
+    <p><%= link_to " Edit", edit_site_path(@site) %><%=' '%> <%= link %> <br/><%="id:#{@site.id}"%><p/>
+<center> <h2><font color="red">Events</font><h2/> </center>
     <% @events.each do |event|%>
-    <%= event.name %><br/>
+<%=  "#{event.name} "%><br/> <%="user: #{event.property_2}" %>  <br/><br/>
     <%end%>
 <%else%>
  <% redirect_to root_path %>
  <%=flash[:notice] = "Must sign in or sign up!!"%>
 <%end%>
 
-<%if 1==0 %>
+<%if current_user.role == 'admin' %>
+<br/><br/><br/>
+                  <% a=[] %>
+                <% @events.each do |event | %>
+            
+                      <%if event.created_at.strftime("%d").to_i == 20 %>
+                            <% a << event %>
+                          <%end%>
+  
+  
+                <% end %>
+                  <%avar = a.length %><br/><br/>
+  
             <font color='red'><%='rails .logger.methods'%></font>
             <%=@any %><br/> <!-- rails logger methods -->
 
@@ -40,4 +184,21 @@
             <%= this %><br/><br/>
             <%end%>
 
+              
+
 <%end%>
+
+
+
+
+       
+   
+
+   
+
+
+
+
+
+
+
