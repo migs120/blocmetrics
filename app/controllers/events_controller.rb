@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-    before_filter :set_headers
+  before_filter :set_headers
     respond_to :html, :json
    skip_before_filter :verify_authenticity_token
   def index
