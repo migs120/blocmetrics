@@ -138,17 +138,17 @@
 
   // track a client-side event using the Blocmetrics analytics service<br/>
 var _bm_event = {<br/>
-                  name: "<%= "<%=" %>  <%= "request.original_url" %> <%="%"%> <%=">" %>",<br/>
+                  name: "<%= "Date()" %>",<br/>
                 
                     site_identifier: '<%= @site.id %>',<br/>
                   property_1: "<%= "<%=" %>  <%= "request.original_url" %> <%="%"%> <%=">" %>",<br/>
-                  property_2: " <%= "<%=" %>  <%= "current_user ? current_user.email : 'Guest' " %> <%="%"%> <%=">" %> "<br/>
+                  property_2: " <%= "Date()" %> "<br/>
                 }<br/>
 
 var _bm_request = new XMLHttpRequest();<br/>
       
 
-    _bm_request.open("POST", "http://mybox1-169928.usw1.nitrousbox.com/events.json", true);<br/>
+    _bm_request.open("POST", "https://mgmetrics.herokuapp.com/events.json", true);<br/>
     _bm_request.setRequestHeader('Content-Type', 'application/json');<br/>
     _bm_request.onreadystatechange = function() {
                                           
